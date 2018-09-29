@@ -1,7 +1,12 @@
 from tkinter import *
+from pygame import mixer
+
 
 # Create a tkinter window called root.
 root = Tk()
+
+# Initialize pygame mixer
+mixer.init()
 
 # Define the size of the window
 root.geometry("300x300")
