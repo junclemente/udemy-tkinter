@@ -21,8 +21,11 @@ photo = PhotoImage(file="play-button64.gif")
 labelphoto = Label(root, image=photo)
 labelphoto.pack()
 
-# btn = Button(root, text="Play this", command=play_button)
-btn = Button(root, image=photo)
+def play_button():
+    print("Hey! The play button has been pressed.")
+
+btn = Button(root, text="Play this", command=play_button)
+# btn = Button(root, image=photo)
 btn.pack()
 
 # Refreshes 'root' window
