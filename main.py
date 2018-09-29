@@ -23,14 +23,15 @@ text.pack()
 
 
 # Function to be called when btn is clicked
-def play_button():
-    print("Hey! The play button has been pressed.")
+def play_music():
+    mixer.music.load("BrokeForFree-NightOwl.mp3")
+    mixer.music.play()
 
 
 # Add an image to use as a button
-photo = PhotoImage(file="play-button64.gif")
-btn = Button(root, image=photo, command=play_button)
-btn.pack()
+play_photo = PhotoImage(file="play-button64.gif")
+play_button = Button(root, image=play_photo, command=play_music)
+play_button.pack()
 
 # Refreshes 'root' window
 root.mainloop()
