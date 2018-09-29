@@ -16,5 +16,14 @@ root.iconbitmap(r'melody.ico')
 text = Label(root, text="Let\'s make some noise!")
 text.pack()
 
+# Add an image to use as a button
+photo = PhotoImage(file="play-button64.gif")
+labelphoto = Label(root, image=photo)
+labelphoto.pack()
+
+# btn = Button(root, text="Play this", command=play_button)
+btn = Button(root, image=photo)
+btn.pack()
+
 # Refreshes 'root' window
 root.mainloop()
