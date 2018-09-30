@@ -11,13 +11,18 @@ root = Tk()
 menubar = Menu(root)
 root.config(menu=menubar)
 
-# Create 'File' sub_menu
+# Define the 'File' drop-down submenu
 filemenu = Menu(menubar)
 filemenu.add_command(label="Open")
 filemenu.add_command(label="Exit")
 
 # Add filemenu to menubar
 menubar.add_cascade(label="File", menu=filemenu)
+
+# Define 'Help' drop-down submenu and add to menubar
+helpmenu = Menu(menubar)
+helpmenu.add_command(label="About Us")
+menubar.add_cascade(label="Help", menu=helpmenu)
 
 # Initialize pygame mixer
 mixer.init()
