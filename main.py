@@ -7,6 +7,16 @@ INITIAL_VOLUME = 70
 # Create a tkinter window called root.
 root = Tk()
 
+# Create menubar
+menubar = Menu(root)
+root.config(menubar)
+
+# Create sub_menu
+sub_menu = Menu(menubar)
+menubar.add_cascade(label="File", menu=sub_menu)
+sub_menu.add_command(label="New Project")
+sub_menu.add_command(label="New")
+
 # Initialize pygame mixer
 mixer.init()
 
