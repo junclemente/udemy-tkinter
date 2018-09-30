@@ -4,7 +4,7 @@ from tkinter import *
 from tkinter import filedialog
 from pygame import mixer
 
-INITIAL_VOLUME = 45
+INITIAL_VOLUME = 65
 
 
 # Create a tkinter window called root.
@@ -62,9 +62,15 @@ text.pack()
 
 # Function to be called when play_button is clicked
 def play_music():
-    # mixer.music.load("BrokeForFree-NightOwl.mp3")
-    mixer.music.load(filename)
-    mixer.music.play()
+    try:
+        # mixer.music.load("BrokeForFree-NightOwl.mp3")
+        mixer.music.load(filename)
+        mixer.music.play()
+    except:
+        tkinter.messagebox.showerror("File not found.",
+                                     "Melody could not find the file. "
+                                     "Please select a file from the Menu.")
+        print("Error")
 
 
 # Function to stop music when clicked
