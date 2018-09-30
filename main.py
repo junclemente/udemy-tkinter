@@ -28,10 +28,15 @@ def play_music():
     mixer.music.play()
 
 
-# Add an image to use as a button
+# Add an play button image
 play_photo = PhotoImage(file="play-button64.gif")
 play_button = Button(root, image=play_photo, command=play_music)
 play_button.pack()
+
+# Add stop button image
+stop_photo = PhotoImage(file="stop64.gif")
+stop_button = Button(root, image=stop_photo)
+stop_button.pack()
 
 # Refreshes 'root' window
 root.mainloop()
