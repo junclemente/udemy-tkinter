@@ -22,14 +22,22 @@ text = Label(root, text="Let\'s make some noise!")
 text.pack()
 
 
-# Function to be called when btn is clicked
+# Function to be called when play_button is clicked
 def play_music():
     mixer.music.load("BrokeForFree-NightOwl.mp3")
     mixer.music.play()
 
+
 # Function to stop music when clicked
 def stop_music():
     mixer.music.stop()
+
+
+# Function to adjust volume
+def set_music_volume(val):
+    # Note: set_volume function takes value from 0 - 1.
+    volume = int(val)/100
+    mixer.music.set_volume(volume)
 
 
 # Add an play button image
@@ -43,7 +51,8 @@ stop_button = Button(root, image=stop_photo, command=stop_music)
 stop_button.pack()
 
 # Create scale widget to control volume
-volume_scale = Scale(root, from_=0, to=100, orient=HORIZONTAL)
+volume_scale = Scale(root, from_=0, to=100, orient=HORIZONTAL,
+                     command=set_music_volume)
 volume_scale.pack()
 
 
