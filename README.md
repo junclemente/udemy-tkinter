@@ -18,3 +18,4 @@ A few issues that I am running into with this course is that the author is using
 #### Icons from [www.flaticon.com](https://www.flaticon.com)
 * "Music player free icon" Icon made by [Smashicons](https://www.flaticon.com/authors/smashicons)
 * "Play button free icon" Icon made by [Smashicons](https://www.flaticon.com/authors/smashicons)
+* "Stop free icon" Icon made by [Smashicons](https://www.flaticon.com/authors/smashicons)
