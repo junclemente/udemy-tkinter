@@ -15,7 +15,7 @@ root.config(menu=menubar)
 # Define the 'File' drop-down submenu
 filemenu = Menu(menubar)
 filemenu.add_command(label="Open")
-filemenu.add_command(label="Exit")
+filemenu.add_command(label="Exit", command=root.destroy)
 
 # Add filemenu to menubar
 menubar.add_cascade(label="File", menu=filemenu)
