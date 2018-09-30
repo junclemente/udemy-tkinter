@@ -1,3 +1,4 @@
+import tkinter.messagebox
 from tkinter import *
 from pygame import mixer
 
@@ -19,9 +20,17 @@ filemenu.add_command(label="Exit")
 # Add filemenu to menubar
 menubar.add_cascade(label="File", menu=filemenu)
 
+
+# Function to show messagebox for About Us in Help menu.
+def about_us():
+    tkinter.messagebox.showinfo('Our title',
+                                'This is a music player built using Python '
+                                'Tkinter developed by @code_and_light.')
+
+
 # Define 'Help' drop-down submenu and add to menubar
 helpmenu = Menu(menubar)
-helpmenu.add_command(label="About Us")
+helpmenu.add_command(label="About Us", command=about_us)
 menubar.add_cascade(label="Help", menu=helpmenu)
 
 # Initialize pygame mixer
