@@ -1,5 +1,7 @@
 import tkinter.messagebox
+
 from tkinter import *
+from tkinter import filedialog
 from pygame import mixer
 
 INITIAL_VOLUME = 45
@@ -12,9 +14,17 @@ root = Tk()
 menubar = Menu(root)
 root.config(menu=menubar)
 
+
+# Opens dialogbox to ask for file to open
+def browse_file():
+    global filename
+    filename = filedialog.askopenfilename()
+    # print(filename)
+
+
 # Define the 'File' drop-down submenu
 filemenu = Menu(menubar)
-filemenu.add_command(label="Open")
+filemenu.add_command(label="Open", command=browse_file)
 filemenu.add_command(label="Exit", command=root.destroy)
 
 # Add filemenu to menubar
@@ -25,7 +35,7 @@ menubar.add_cascade(label="File", menu=filemenu)
 def about_us():
     tkinter.messagebox.showinfo('About Melody',
                                 'This is a music player built using Python '
-                                'Tkinter developed by @code_and_light.')
+                                'Tkinter developed by Jun C.')
 
 
 # Define 'Help' drop-down submenu and add to menubar
@@ -52,7 +62,8 @@ text.pack()
 
 # Function to be called when play_button is clicked
 def play_music():
-    mixer.music.load("BrokeForFree-NightOwl.mp3")
+    # mixer.music.load("BrokeForFree-NightOwl.mp3")
+    mixer.music.load(filename)
     mixer.music.play()
 
 
