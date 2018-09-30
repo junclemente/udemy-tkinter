@@ -27,6 +27,10 @@ def play_music():
     mixer.music.load("BrokeForFree-NightOwl.mp3")
     mixer.music.play()
 
+# Function to stop music when clicked
+def stop_music():
+    mixer.music.stop()
+
 
 # Add an play button image
 play_photo = PhotoImage(file="play-button64.gif")
@@ -35,7 +39,7 @@ play_button.pack()
 
 # Add stop button image
 stop_photo = PhotoImage(file="stop64.gif")
-stop_button = Button(root, image=stop_photo)
+stop_button = Button(root, image=stop_photo, command=stop_music)
 stop_button.pack()
 
 # Refreshes 'root' window
