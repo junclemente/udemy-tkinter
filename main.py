@@ -43,7 +43,7 @@ stop_button = Button(root, image=stop_photo, command=stop_music)
 stop_button.pack()
 
 # Create scale widget to control volume
-volume_scale = Scale(root, from_=0, to=100)
+volume_scale = Scale(root, from_=0, to=100, orient=HORIZONTAL)
 volume_scale.pack()
 
 
