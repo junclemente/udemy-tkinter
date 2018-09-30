@@ -9,7 +9,7 @@ root = Tk()
 
 # Create menubar
 menubar = Menu(root)
-root.config(menubar)
+root.config(menu=menubar)
 
 # Create sub_menu
 sub_menu = Menu(menubar)
