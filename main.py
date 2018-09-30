@@ -1,6 +1,8 @@
 from tkinter import *
 from pygame import mixer
 
+INITIAL_VOLUME = 70
+
 
 # Create a tkinter window called root.
 root = Tk()
@@ -53,6 +55,8 @@ stop_button.pack()
 # Create scale widget to control volume
 volume_scale = Scale(root, from_=0, to=100, orient=HORIZONTAL,
                      command=set_music_volume)
+volume_scale.set(INITIAL_VOLUME)
+mixer.music.set_volume(INITIAL_VOLUME)
 volume_scale.pack()
 
 
