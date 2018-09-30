@@ -2,7 +2,7 @@ import tkinter.messagebox
 from tkinter import *
 from pygame import mixer
 
-INITIAL_VOLUME = 70
+INITIAL_VOLUME = 45
 
 
 # Create a tkinter window called root.
@@ -23,7 +23,7 @@ menubar.add_cascade(label="File", menu=filemenu)
 
 # Function to show messagebox for About Us in Help menu.
 def about_us():
-    tkinter.messagebox.showinfo('Our title',
+    tkinter.messagebox.showinfo('About Melody',
                                 'This is a music player built using Python '
                                 'Tkinter developed by @code_and_light.')
 
@@ -81,8 +81,9 @@ stop_button.pack()
 # Create scale widget to control volume
 volume_scale = Scale(root, from_=0, to=100, orient=HORIZONTAL,
                      command=set_music_volume)
+# Set initial value of scale and set initial volume
 volume_scale.set(INITIAL_VOLUME)
-mixer.music.set_volume(INITIAL_VOLUME)
+set_music_volume(INITIAL_VOLUME)
 volume_scale.pack()
 
 
