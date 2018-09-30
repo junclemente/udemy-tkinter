@@ -42,5 +42,10 @@ stop_photo = PhotoImage(file="stop64.gif")
 stop_button = Button(root, image=stop_photo, command=stop_music)
 stop_button.pack()
 
+# Create scale widget to control volume
+volume_scale = Scale(root, from_=0, to=100)
+volume_scale.pack()
+
+
 # Refreshes 'root' window
 root.mainloop()
