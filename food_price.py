@@ -1,10 +1,11 @@
 from tkinter import *
 
-# Create tkinter window called root
+# Configure Window
 root = Tk()
 root.title("Food Price")
 root.geometry("300x200")
 root.resizable(width=False, height=False)
+root.configure(bg='gray77')
 
 
 
