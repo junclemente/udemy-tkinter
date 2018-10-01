@@ -15,13 +15,28 @@ root.resizable(width=False, height=False)
 # StringVar is used to declare a Tkinter string variable
 name = StringVar()
 
+
 def print_name():
     name.set('Code and Light')
 
 
+def print_hello_world():
+    name.set('Hello, World!')
+
+
+def print_movie():
+    name.set('Hamilton: The Movie!')
+
+
 # Define button
-btn = Button(root, text='click me!', command=lambda: print_name())
-btn.place(x=0, y=0)
+btn1 = Button(root, text='click me!', command=lambda: print_name())
+btn1.place(x=0, y=0)
+
+btn2 = Button(root, text='Hello!', command=lambda: print_hello_world())
+btn2.place(x=100, y=0)
+
+btn3 = Button(root, text='Movie!', command=lambda: print_movie())
+btn3.place(x=200, y=0)
 
 # Define label with a textvariable assigned to name
 label = Label(root, textvariable=name)
