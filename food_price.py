@@ -8,18 +8,18 @@ root.resizable(width=False, height=False)
 color = 'gray77'
 root.configure(bg=color)
 
-v = StringVar()
+v = IntVar()
 
 label = Label(root, text="Choose an Item", bg=color)
 label.place(x=95, y=5)
 
-r_btn = Radiobutton(root, text="Banana", bg=color, variable=v, value='Banana')
+r_btn = Radiobutton(root, text="Banana", bg=color, variable=v, value=0)
 r_btn.place(x=5, y=30)
 
-r_btn2 = Radiobutton(root, text="Apple", bg=color, variable=v, value='Apple')
+r_btn2 = Radiobutton(root, text="Apple", bg=color, variable=v, value=1)
 r_btn2.place(x=5, y=60)
 
-r_btn3 = Radiobutton(root, text="Orange", bg=color, variable=v, value='Orange')
+r_btn3 = Radiobutton(root, text="Orange", bg=color, variable=v, value=2)
 r_btn3.place(x=5, y=90)
 
 
