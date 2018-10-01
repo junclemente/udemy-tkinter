@@ -21,5 +21,17 @@ r_btn3 = Radiobutton(root, text="Orange")
 r_btn3.place(x=5, y=90)
 
 
+entry = Entry(root, width=22)
+entry.place(x=80, y=130)
+
+label_res = Label(root, text="Price")
+label_res.place(x=5, y=130)
+
+entry_2 = Entry(root, width=22)
+entry_2.place(x=80, y=160)
+
+btn = Button(root, text="Cal")
+btn.place(x=5, y=160)
+
 # Refreshes 'root' window and continues to run it
 root.mainloop()
