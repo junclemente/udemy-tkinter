@@ -9,9 +9,12 @@ color = 'gray77'
 root.configure(bg=color)
 
 # Declare variables, IntVar() is tkinter variable declaration
-BANANA = 5
-APPLE = 7
-ORANGE = 10
+BANANA = 8
+APPLE = 6
+ORANGE = 7
+PINEAPPLE = 12
+JACKFRUIT = 15
+AVOCADOS = 5
 v = IntVar()
 res = IntVar()
 
@@ -26,8 +29,14 @@ def cal_price():
         res.set(int(entry_2.get()) * APPLE)
     elif value == 2:
         res.set(int(entry_2.get()) * ORANGE)
+    elif value == 3:
+        res.set(int(entry_2.get()) * PINEAPPLE)
+    elif value == 4:
+        res.set(int(entry_2.get()) * JACKFRUIT)
+    elif value == 5:
+        res.set(int(entry_2.get()) * AVOCADOS)
     else:
-        pass
+        pas
 
 
 # Create text label at top of window
@@ -44,6 +53,14 @@ r_btn2.place(x=5, y=60)
 r_btn3 = Radiobutton(root, text="Orange", bg=color, variable=v, value=2)
 r_btn3.place(x=5, y=90)
 
+r_btn4 = Radiobutton(root, text="Pineapple", bg=color, variable=v, value=3)
+r_btn4.place(x=150, y=30)
+
+r_btn5 = Radiobutton(root, text="Jackfruit", bg=color, variable=v, value=4)
+r_btn5.place(x=150, y=60)
+
+r_btn6 = Radiobutton(root, text="Avocados", bg=color, variable=v, value=5)
+r_btn6.place(x=150, y=90)
 
 # Create and label 'Price' entry box
 entry = Entry(root, width=22, textvariable=res)
