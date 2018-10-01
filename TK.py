@@ -12,35 +12,27 @@ root.geometry("300x300")
 # Prevent window from being resized
 root.resizable(width=False, height=False)
 
-# StringVar is used to declare a Tkinter string variable
-name = StringVar()
+
+word = StringVar()
+
+entry = Entry(root)
+entry.place(x=50, y=0)
 
 
-def print_name():
-    name.set('Code and Light')
+def get_name():
+    print(entry.get())
+    word.set(entry.get())
+    entry.insert(0, 'This is my name: ')
 
+label = Label(root, text='Name: ')
+label.place(x=0, y=0)
 
-def print_hello_world():
-    name.set('Hello, World!')
+btn = Button(root, text='get name', command=lambda: get_name())
+btn.place(x=100, y=100)
 
+display = Label(root, textvariable=word)
+display.place(x=100, y=150)
 
-def print_movie():
-    name.set('Hamilton: The Movie!')
-
-
-# Define button
-btn1 = Button(root, text='click me!', command=lambda: print_name())
-btn1.place(x=0, y=0)
-
-btn2 = Button(root, text='Hello!', command=lambda: print_hello_world())
-btn2.place(x=100, y=0)
-
-btn3 = Button(root, text='Movie!', command=lambda: print_movie())
-btn3.place(x=200, y=0)
-
-# Define label with a textvariable assigned to name
-label = Label(root, textvariable=name)
-label.place(x=100, y=150)
 
 
 # Refreshes 'root' window and continues to run it
