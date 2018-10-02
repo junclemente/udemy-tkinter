@@ -5,8 +5,7 @@ from io import StringIO
 # Declare variables
 COLOR = "gray"
 COLOR2 = "gray88"
-# TOPCOLOR = "black"
-# BOTTOMCOLOR="red"
+
 # Define window
 root = Tk()
 root.geometry("800x500")
@@ -21,10 +20,16 @@ def clear_python():
 
 
 def run():
-    # run python code
+    # Listener for output, waiting for code to run
+    old_stdout = sys.stdout
+    redirected_output = sys.stdout = StringIO()
+
+    # Execute input from python_code textbox
     exec(python_code.get('1.0', END))
-    # show python code to user
-    # pass
+    sys.stdout = old_stdout
+
+    # Gets result of 'redirected_output' and outputs into a messagebox
+    tkinter.messagebox.showinfo('Result', redirected_output.getvalue())
 
 
 # Define frames
