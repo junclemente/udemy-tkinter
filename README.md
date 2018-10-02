@@ -38,9 +38,9 @@ _How To Use_:
 
 1. Download the file `file_counter.py` and run the app by typing:
 
-```
-$:python3 file_counter.py
-```
+	```
+	$:python3 file_counter.py
+	```
 or whatever method you use to run a Python3 file. 
 
 2. Enter ', ' comma seperated words into the top text box. 
@@ -48,3 +48,18 @@ or whatever method you use to run a Python3 file.
 4. Click `Count Words` button. 
 5. After some magic, a count of how many times each word entered is found in the uploaded text is displayed in the lower text box.
 6. Use `Clear Text` button to clear all text in the application. 
+
+
+### Python IDE
+_Description_: This is a simple IDE that takes an Python script entered in the text box, executes it, and returns the result in an alert message box. 
+
+_How To Use_:
+
+1. Download the file `python_ide.py` and run the app by typing: 
+
+	```
+	$python3 python_ide.py
+	```
+2. Enter Python code in the text box. 
+3. Click the `run` button to execute the script. The results of the program will be shown in a pop-up "Warning" window. 
+4. Click `clear` to clear the text box. 
