@@ -4,6 +4,7 @@ from tkinter import filedialog
 # Define variables
 BGCOLOR = 'gray'
 BGCOLOR2 = 'gray77'
+count_result = dict()
 
 # Define Window
 root = Tk()
@@ -35,7 +36,13 @@ def count_text(file):
     file_open.close()
 
     for word in word_list.get().split(','):
-        print(word)
+        for text in full_text:
+            if word in count_result:
+                count_result[word] = count_result[word] + text.count(word)
+            else:
+                count_result[word] = text.count(word)
+
+    print(count_result)
 
 
 # Create entry box for word_list
