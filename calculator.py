@@ -4,6 +4,9 @@ from tkinter import *
 # Declare variables
 COLOR = "gray55"
 COLOR2 = "gray88"
+num1 = IntVar()
+num2 = IntVar()
+result_value = IntVar()
 
 
 # Define main window
@@ -46,14 +49,25 @@ btn_divide.pack(side=LEFT)
 label_first_num = Label(top_frame, text="Input Number 1:", bg=COLOR)
 label_first_num.pack(side=LEFT, padx=5, pady=5)
 
-entry_first_num = Entry(top_frame, highlightbackground=COLOR)
+entry_first_num = Entry(top_frame, highlightbackground=COLOR,
+                        textvariable=num1)
 entry_first_num.pack(side=LEFT)
 
 label_second_num = Label(top2_frame, text="Input Number 2:", bg=COLOR)
 label_second_num.pack(side=LEFT, padx=5, pady=5)
 
-entry_second_num = Entry(top2_frame, highlightbackground=COLOR)
+entry_second_num = Entry(top2_frame, highlightbackground=COLOR,
+                         textvariable=num2)
 entry_second_num.pack(side=LEFT)
+
+
+# Define Result box and labels
+label_result = Label(bottom_frame, text="Result:", bg=COLOR)
+label_result.pack(side=LEFT, padx=5, pady=5)
+
+entry_result = Entry(bottom_frame, highlightbackground=COLOR,
+                     textvariable=result_value)
+entry_result.pack(side=LEFT)
 
 # Execute window and refresh
 root.mainloop()
