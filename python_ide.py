@@ -12,6 +12,12 @@ root.resizable(width=False, height=False)
 root.title("Run Python Code")
 root.configure(bg=COLOR)
 
+
+# Define functions
+def clear_python():
+    python_code.delete('1.0', END)
+
+
 # Define frames
 top = Frame(root, width=800, height=50, bg=COLOR)
 top.pack(side=TOP)
@@ -21,7 +27,8 @@ bottom.pack(side=BOTTOM)
 
 # Define buttons
 btn_clear = Button(top, text="clear", highlightbackground=COLOR,
-                   font=('arial', 25, 'bold'))
+                   font=('arial', 25, 'bold'),
+                   command=lambda: clear_python())
 btn_clear.pack(side=TOP)
 
 btn_run = Button(top, text="run", highlightbackground=COLOR,
