@@ -5,12 +5,14 @@ from tkinter import *
 COLOR = "gray55"
 COLOR2 = "gray88"
 
+
 # Define main window
 root = Tk()
 root.geometry("400x150")
 root.resizable(width=False, height=False)
 root.title("Simple Calculator")
 root.configure(bg=COLOR)
+
 
 # Define frames
 top_frame = Frame(root, width=400, height=40, bg=COLOR)
@@ -25,6 +27,7 @@ top3_frame.pack(side=TOP)
 bottom_frame = Frame(root, width=400, height=40, bg=COLOR)
 bottom_frame.pack(side=TOP)
 
+
 # Define buttons
 btn_plus = Button(top3_frame, text=" + ", width=8, highlightbackground=COLOR)
 btn_plus.pack(side=LEFT, padx=5, pady=5)
@@ -37,6 +40,20 @@ btn_multiply.pack(side=LEFT)
 
 btn_divide = Button(top3_frame, text=" / ", width=8, highlightbackground=COLOR)
 btn_divide.pack(side=LEFT)
+
+
+# Define Entry and Labels
+label_first_num = Label(top_frame, text="Input Number 1:", bg=COLOR)
+label_first_num.pack(side=LEFT, padx=5, pady=5)
+
+entry_first_num = Entry(top_frame, highlightbackground=COLOR)
+entry_first_num.pack(side=LEFT)
+
+label_second_num = Label(top2_frame, text="Input Number 2:", bg=COLOR)
+label_second_num.pack(side=LEFT, padx=5, pady=5)
+
+entry_second_num = Entry(top2_frame, highlightbackground=COLOR)
+entry_second_num.pack(side=LEFT)
 
 # Execute window and refresh
 root.mainloop()
