@@ -34,6 +34,9 @@ def count_text(file):
     full_text = file_open.readlines()
     file_open.close()
 
+    for word in word_list.get().split(','):
+        print(word)
+
 
 # Create entry box for word_list
 word_list = Entry(root, width=55)
