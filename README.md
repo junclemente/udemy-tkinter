@@ -20,11 +20,11 @@ _How To Use_:
 
 1. Download the `food_price.py` file and run the app by typing: 
 
-```
-$:python3 food_price.py
-``` 
+	```
+	$:python3 food_price.py
+	``` 
 
-or whatever method you use to run a Python3 file. 
+	or whatever method you use to run a Python3 	file. 
 
 2. Select a food item by clicking the adjacent radio button. 
 3. Type an integer into the box next to "Cal".
@@ -63,3 +63,15 @@ _How To Use_:
 2. Enter Python code in the text box. 
 3. Click the `run` button to execute the script. The results of the program will be shown in a pop-up "Warning" window. 
 4. Click `clear` to clear the text box. 
+
+### Simple Calculator
+_Description_: In this app, enter two numbers then click a button that corresponds to add, subtract, multiply, or divide. The result will then be printed in the 'Results' box. 
+
+_How To Use_: 
+
+1. Download the file `calculator.py` and run the app by typing:
+
+	```
+	$:python3 calculator.py
+	```
+2. Enter a number in each 
