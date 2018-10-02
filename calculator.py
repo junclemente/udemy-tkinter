@@ -25,5 +25,18 @@ top3_frame.pack(side=TOP)
 bottom_frame = Frame(root, width=400, height=40, bg=COLOR)
 bottom_frame.pack(side=TOP)
 
+# Define buttons
+btn_plus = Button(top3_frame, text=" + ", width=8, highlightbackground=COLOR)
+btn_plus.pack(side=LEFT, padx=5, pady=5)
+
+btn_minus = Button(top3_frame, text=" - ", width=8, highlightbackground=COLOR)
+btn_minus.pack(side=LEFT)
+
+btn_multiply = Button(top3_frame, text=" * ", width=8, highlightbackground=COLOR)
+btn_multiply.pack(side=LEFT)
+
+btn_divide = Button(top3_frame, text=" / ", width=8, highlightbackground=COLOR)
+btn_divide.pack(side=LEFT)
+
 # Execute window and refresh
 root.mainloop()
