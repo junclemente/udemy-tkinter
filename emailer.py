@@ -4,6 +4,7 @@ from tkinter import *
 # Define static variables
 COLOR = 'gray55'
 CURSOR_WIDTH = 3
+BORDER_DEPTH = 4
 
 # Define root window
 root = Tk()
@@ -50,15 +51,21 @@ from_label = Label(top, font=("arial", 20, "bold"), text="From: ", bg=COLOR)
 from_label.place(x=10, y=10)
 
 from_entry = Entry(top, font=("arial", 20, "bold"), width=25,
-                   insertwidth=CURSOR_WIDTH)
+                   bd=BORDER_DEPTH, insertwidth=CURSOR_WIDTH)
 from_entry.place(x=80, y=10)
 
 to_label = Label(top, font=("arial", 20, "bold"), text="To: ", bg=COLOR)
 to_label.place(x=410, y=10)
 
 to_entry = Entry(top, font=("arial", 20, "bold"), width=25,
-                 insertwidth=CURSOR_WIDTH)
+                 bd=BORDER_DEPTH, insertwidth=CURSOR_WIDTH)
 to_entry.place(x=480, y=10)
+
+
+# Define Message Box in 'left' frame
+message = Text(left, font=("arial", 20, "bold"), width=55,
+               insertwidth=CURSOR_WIDTH)
+message.pack(side=LEFT)
 
 
 # Execute  root window
