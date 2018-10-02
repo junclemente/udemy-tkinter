@@ -58,7 +58,7 @@ _How To Use_:
 1. Download the file `python_ide.py` and run the app by typing: 
 
 	```
-	$python3 python_ide.py
+	$:python3 python_ide.py
 	```
 2. Enter Python code in the text box. 
 3. Click the `run` button to execute the script. The results of the program will be shown in a pop-up "Warning" window. 
