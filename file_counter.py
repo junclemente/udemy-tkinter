@@ -1,4 +1,5 @@
 from tkinter import *
+from tkinter import filedialog
 
 # Define variables
 BGCOLOR = 'gray'
@@ -21,12 +22,18 @@ def clear_text():
     # end location
     answer.delete('1.0', END)
 
+
+# Opens dialog box to select file
+def open_file():
+    root.filename = filedialog.askopenfilename()
+
 # Create entry box for word_list
 word_list = Entry(root, width=55)
 word_list.place(x=0, y=0)
 
 # Create buttons
-file = Button(root, text='Select file', width=55, highlightbackground=BGCOLOR)
+file = Button(root, text='Select file', width=55, highlightbackground=BGCOLOR,
+              command=lambda: open_file())
 file.place(x=0, y=30)
 
 count = Button(root, text='Count Words', width=55, highlightbackground=BGCOLOR)
