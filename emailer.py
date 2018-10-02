@@ -3,6 +3,7 @@ from tkinter import *
 
 # Define static variables
 COLOR = 'gray55'
+CURSOR_WIDTH = 3
 
 # Define root window
 root = Tk()
@@ -13,7 +14,7 @@ root.configure(bg=COLOR)
 
 
 # Define Frames
-top = Frame(root, width=800, height=50, bg="black")
+top = Frame(root, width=800, height=50, bg=COLOR)
 top.pack(side=TOP)
 
 bottom = Frame(root, width=800, height=50, bg="red")
@@ -26,22 +27,38 @@ right = Frame(root, width=200, height=400, bg=COLOR)
 right.pack(side=RIGHT)
 
 
-# Define buttons
-clear_to_btn = Button(right, text="Clear To", font=('arial', 20, 'bold'),
+# Define buttons in 'right' frame
+clear_to_btn = Button(right, text="Clear To", font=("arial", 20, "bold"),
                       highlightbackground=COLOR)
 clear_to_btn.pack(side=TOP, padx=5, pady=5)
 
-clear_from_btn = Button(right, text="Clear From", font=('arial', 20, 'bold'),
-                      highlightbackground=COLOR)
+clear_from_btn = Button(right, text="Clear From", font=("arial", 20, "bold"),
+                        highlightbackground=COLOR)
 clear_from_btn.pack(side=TOP, padx=5, pady=5)
 
-clear_all_btn = Button(right, text="Clear All", font=('arial', 20, 'bold'),
-                      highlightbackground=COLOR)
+clear_all_btn = Button(right, text="Clear All", font=("arial", 20, "bold"),
+                       highlightbackground=COLOR)
 clear_all_btn.pack(side=TOP, padx=5, pady=5)
 
-send_btn = Button(right, text="Send", font=('arial', 20, 'bold'),
-                      highlightbackground=COLOR)
+send_btn = Button(right, text="Send", font=("arial", 20, "bold"),
+                  highlightbackground=COLOR)
 send_btn.pack(side=TOP, padx=5, pady=5)
+
+
+# Define Entry and Labels in 'top' frame
+from_label = Label(top, font=("arial", 20, "bold"), text="From: ", bg=COLOR)
+from_label.place(x=10, y=10)
+
+from_entry = Entry(top, font=("arial", 20, "bold"), width=25,
+                   insertwidth=CURSOR_WIDTH)
+from_entry.place(x=80, y=10)
+
+to_label = Label(top, font=("arial", 20, "bold"), text="To: ", bg=COLOR)
+to_label.place(x=410, y=10)
+
+to_entry = Entry(top, font=("arial", 20, "bold"), width=25,
+                 insertwidth=CURSOR_WIDTH)
+to_entry.place(x=480, y=10)
 
 
 # Execute  root window
