@@ -35,14 +35,25 @@ def count_text(file):
     full_text = file_open.readlines()
     file_open.close()
 
-    for word in word_list.get().split(','):
+    # Iterates through all words entered in 'word_list'
+    for word in word_list.get().split(', '):
+        # Compares each item in full_text to word and
+        # adds count to count_result
         for text in full_text:
             if word in count_result:
                 count_result[word] = count_result[word] + text.count(word)
             else:
                 count_result[word] = text.count(word)
 
-    print(count_result)
+    # Clears answer textbox
+    answer.delete('1.0', END)
+
+    # Iterates through count_result dict and assigns result to answer textbox
+    for k, v in count_result.items():
+        answer.insert('1.0', '{0} {1} \n'.format(k, v))
+
+    # Clears the count_result dict
+    count_result.clear()
 
 
 # Create entry box for word_list
