@@ -1,10 +1,12 @@
+import tkinter.messagebox
 from tkinter import *
+from io import StringIO
 
 # Declare variables
 COLOR = "gray"
 COLOR2 = "gray88"
 # TOPCOLOR = "black"
-BOTTOMCOLOR="red"
+# BOTTOMCOLOR="red"
 # Define window
 root = Tk()
 root.geometry("800x500")
@@ -16,6 +18,13 @@ root.configure(bg=COLOR)
 # Define functions
 def clear_python():
     python_code.delete('1.0', END)
+
+
+def run():
+    # run python code
+    exec(python_code.get('1.0', END))
+    # show python code to user
+    # pass
 
 
 # Define frames
@@ -32,7 +41,8 @@ btn_clear = Button(top, text="clear", highlightbackground=COLOR,
 btn_clear.pack(side=TOP)
 
 btn_run = Button(top, text="run", highlightbackground=COLOR,
-                 font=('arial', 25, 'bold'))
+                 font=('arial', 25, 'bold'),
+                 command=lambda: run())
 btn_run.pack(side=TOP)
 
 # Define text box
