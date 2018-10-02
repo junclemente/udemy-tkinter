@@ -10,6 +10,17 @@ root.geometry("500x500")
 root.title('File Counter')
 root.configure(bg=BGCOLOR)
 
+
+# Define functions
+def clear_text():
+    # Since word_list is an 'entry' field, you must specify the start index
+    # location and end location.
+    word_list.delete(0, END)
+
+    # Since answer is a text field, you must specify the start line and
+    # end location
+    answer.delete('1.0', END)
+
 # Create entry box for word_list
 word_list = Entry(root, width=55)
 word_list.place(x=0, y=0)
@@ -21,7 +32,8 @@ file.place(x=0, y=30)
 count = Button(root, text='Count Words', width=55, highlightbackground=BGCOLOR)
 count.place(x=0, y=60)
 
-clear = Button(root, text='Clear Text', width=55, highlightbackground=BGCOLOR)
+clear = Button(root, text='Clear Text', width=55, highlightbackground=BGCOLOR,
+               command=lambda: clear_text())
 clear.place(x=0, y=90)
 
 # Create answer box
