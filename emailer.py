@@ -46,17 +46,17 @@ right.pack(side=RIGHT)
 # Define buttons in 'right' frame
 clear_to_btn = Button(right, text="Clear To", font=("arial", 20, "bold"),
                       highlightbackground=COLOR,
-                      command=lambda: clear_to())
+                      command=clear_to)
 clear_to_btn.pack(side=TOP, padx=5, pady=5)
 
 clear_from_btn = Button(right, text="Clear From", font=("arial", 20, "bold"),
                         highlightbackground=COLOR,
-                        command=lambda: clear_from())
+                        command=clear_from)
 clear_from_btn.pack(side=TOP, padx=5, pady=5)
 
 clear_all_btn = Button(right, text="Clear All", font=("arial", 20, "bold"),
                        highlightbackground=COLOR,
-                       command=lambda: clear_all())
+                       command=clear_all)
 clear_all_btn.pack(side=TOP, padx=5, pady=5)
 
 send_btn = Button(right, text="Send", font=("arial", 20, "bold"),
