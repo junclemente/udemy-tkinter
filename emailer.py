@@ -32,22 +32,19 @@ def clear_all():
 
 
 def send_email():
-    # print(from_entry.get())
-    # print(to_entry.get())
-    # print(message.get('1.0', END))
 
     HOST = 'smtp.gmail.com'
     PORT = 465
 
-    USERNAME = 'email@gmail.com'
-    PASSWORD = 'password'
+    USERNAME = 'email@address.com'
+    PASSWORD = 'Passw0rd'
 
     SENDER = from_entry.get()
     RECIPIENT = to_entry.get()
 
     text_subtype = 'plain'
 
-    msg = MIMEText('text', text_subtype)
+    msg = MIMEText(message.get('1.0', END), text_subtype)
 
     msg['Subject'] = 'Python Script'
     msg['From'] = SENDER
