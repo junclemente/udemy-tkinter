@@ -29,6 +29,12 @@ def clear_all():
     clear_to()
 
 
+def send_email():
+    print(from_entry.get())
+    print(to_entry.get())
+    print(message.get('1.0', END))
+
+
 # Define Frames
 top = Frame(root, width=800, height=50, bg=COLOR)
 top.pack(side=TOP)
@@ -60,7 +66,8 @@ clear_all_btn = Button(right, text="Clear All", font=("arial", 20, "bold"),
 clear_all_btn.pack(side=TOP, padx=5, pady=5)
 
 send_btn = Button(right, text="Send", font=("arial", 20, "bold"),
-                  highlightbackground=COLOR)
+                  highlightbackground=COLOR,
+                  command=send_email)
 send_btn.pack(side=TOP, padx=5, pady=5)
 
 
