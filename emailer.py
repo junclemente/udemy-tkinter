@@ -36,8 +36,8 @@ def send_email():
     HOST = 'smtp.gmail.com'
     PORT = 465
 
-    USERNAME = 'email@address.com'
-    PASSWORD = 'Passw0rd'
+    USERNAME = 'email@address.com'  # Enter your email address
+    PASSWORD = 'Passw0rd'  # Enter the Google provided password
 
     SENDER = from_entry.get()
     RECIPIENT = to_entry.get()
