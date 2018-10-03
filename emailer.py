@@ -6,6 +6,7 @@ COLOR = 'gray55'
 CURSOR_WIDTH = 3
 BORDER_DEPTH = 4
 
+
 # Define root window
 root = Tk()
 root.geometry("800x500")
@@ -14,14 +15,28 @@ root.title("Email Sender")
 root.configure(bg=COLOR)
 
 
+# Define Functions
+def clear_from():
+    from_entry.delete(0, END)
+
+
+def clear_to():
+    to_entry.delete(0, END)
+
+
+def clear_all():
+    clear_from()
+    clear_to()
+
+
 # Define Frames
 top = Frame(root, width=800, height=50, bg=COLOR)
 top.pack(side=TOP)
 
-bottom = Frame(root, width=800, height=50, bg="red")
+bottom = Frame(root, width=800, height=50, bg=COLOR)
 bottom.pack(side=BOTTOM)
 
-left = Frame(root, width=600, height=400, bg="blue")
+left = Frame(root, width=600, height=400, bg=COLOR)
 left.pack(side=LEFT)
 
 right = Frame(root, width=200, height=400, bg=COLOR)
@@ -30,15 +45,18 @@ right.pack(side=RIGHT)
 
 # Define buttons in 'right' frame
 clear_to_btn = Button(right, text="Clear To", font=("arial", 20, "bold"),
-                      highlightbackground=COLOR)
+                      highlightbackground=COLOR,
+                      command=lambda: clear_to())
 clear_to_btn.pack(side=TOP, padx=5, pady=5)
 
 clear_from_btn = Button(right, text="Clear From", font=("arial", 20, "bold"),
-                        highlightbackground=COLOR)
+                        highlightbackground=COLOR,
+                        command=lambda: clear_from())
 clear_from_btn.pack(side=TOP, padx=5, pady=5)
 
 clear_all_btn = Button(right, text="Clear All", font=("arial", 20, "bold"),
-                       highlightbackground=COLOR)
+                       highlightbackground=COLOR,
+                       command=lambda: clear_all())
 clear_all_btn.pack(side=TOP, padx=5, pady=5)
 
 send_btn = Button(right, text="Send", font=("arial", 20, "bold"),
