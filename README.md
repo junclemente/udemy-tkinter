@@ -74,4 +74,23 @@ _How To Use_:
 	```
 	$:python3 calculator.py
 	```
-2. Enter a number in each 
+2. Enter a number in the boxes for 'Input Number 1:' and 'Input Number 2:'.
+3. Click a button corresponding to `+`, `-`, `*`, or `/` to perform a mathematical calculation. 
+4. Magic! The result will show next to the 'Result:' box. 
+
+### Email Sender
+_Description_: This is a simple email app. Enter the 'from' email address and the 'to' email address. Type a message. Then click 'Send'. 
+
+_How To Use_:
+
+1. Download the file `emailer.py` and run the app by typing:
+
+	```
+	$:python3 emailer.py
+	```
+
+2. Enter the 'from' email address in the box provided. Do the same for the 'to' email address (or addresses, seperated by a comma. 
+3. To clear the 'from', 'to', or both entry boxes, click on the appropriate button on the right side. 
+4. This is an actual, working email sending app. Currently, it is set up to send email from gmail. To be able to send email from a gmail account, you must enter your email address next to `USERNAME`.
+5. For the `PASSWORD`, you cannot just use your own password. You must [follow these instructions](https://support.google.com/mail/?p=InvalidSecondFactor) to host an email session.
+6. Once you've entered the required information, including a message, click `send` to send the message. 
