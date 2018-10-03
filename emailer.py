@@ -1,4 +1,6 @@
 from tkinter import *
+from smtplib import SMTP_SSL as SMTP
+from email.mime.text import MIMEText
 
 
 # Define static variables
@@ -30,9 +32,33 @@ def clear_all():
 
 
 def send_email():
-    print(from_entry.get())
-    print(to_entry.get())
-    print(message.get('1.0', END))
+    # print(from_entry.get())
+    # print(to_entry.get())
+    # print(message.get('1.0', END))
+
+    HOST = 'smtp.gmail.com'
+    PORT = 465
+
+    USERNAME = 'email@gmail.com'
+    PASSWORD = 'password'
+
+    SENDER = from_entry.get()
+    RECIPIENT = to_entry.get()
+
+    text_subtype = 'plain'
+
+    msg = MIMEText('text', text_subtype)
+
+    msg['Subject'] = 'Python Script'
+    msg['From'] = SENDER
+    msg['To'] = RECIPIENT
+
+    try:
+        connection = SMTP(HOST, PORT)
+        connection.login(USERNAME, PASSWORD)
+        connection.sendmail(SENDER, RECIPIENT, msg.as_string())
+    except Exception as e:
+        print(e)
 
 
 # Define Frames
