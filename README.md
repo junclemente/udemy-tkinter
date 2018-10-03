@@ -2,14 +2,17 @@
 
 This repository contains the desktop applications I am developing using Tkinter and Python3. There are five fully functioning desktop apps that I will be creating following the course listed below. 
 
-Since this repository is for learning about Tkinter, the application may not have been tested for errors and/or edge cases. This may be corrected in the future to develop a more robust program, but as of right now, assume that the program may break if the instructions aren't followed. 
+Since this repository is for learning about Tkinter, the applications may not have been tested for errors and/or edge cases. This may be corrected in the future to develop a more robust program, but as of right now, assume that the program may break if the instructions aren't followed. 
+
+Another part of this course is converting a Tkinter/Python app into a standalone desktop application. See below for more information about converting one of the apps into a standalone desktop application. 
 
 ### Course 
 [Master Tkinter By Building 5 Fully Functioning Apps](https://www.udemy.com/master-tkinter-by-building-5-apps/) on [Udemy.com](https://www.udemy.com).
  
 #### Technology
-* Python3
+* Python v3.7
 * Tkinter
+* py2app v0.13
 
 ## Desktop Applications Projects
 ### Simple Food Price Calculator
@@ -94,3 +97,12 @@ _How To Use_:
 4. This is an actual, working email sending app. Currently, it is set up to send email from gmail. To be able to send email from a gmail account, you must enter your email address next to `USERNAME`.
 5. For the `PASSWORD`, you cannot just use your own password. You must [follow these instructions](https://support.google.com/mail/?p=InvalidSecondFactor) to host an email session.
 6. Once you've entered the required information, including a message, click `send` to send the message. 
+
+
+## Converting 'Simple Calculator' to a standalone MacOS application
+
+In this course, the instructor also shows us how to use the `py2app` Python library to convert a Tkinter/Python application into a standalone desktop application. 
+
+I ran into a bit of a problem when following the tutorial because the instructor was using `Python v3.6` and `py2app v0.13`. I was using `Python 3.7` and due to some changes between Python v3.6 and v3.7, py2app v0.13 doesn't work out-of-the-box with v3.7. A few changes had to be made to py2app to make it work with the version of Python I was using. Thankfully, someone else on [stackoverflow.com](https://www.stackoverflow.com) had the same problem and others were able to provide a solution. The solution to making py2app v0.13 work with Python 3.7: [An import error when using Py2app](https://stackoverflow.com/questions/51471259/an-import-error-when-using-py2app).
+
+The 'Simple Calculator' app was converted using py2app to a standalone MacOS desktop application. To try it out, download `Cal.app` in the `/dist` folder. Double-click it to open. 
